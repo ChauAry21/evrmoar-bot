@@ -15,7 +15,7 @@ public class ReadyListener implements EventListener
     public static void main(String[] args)
             throws InterruptedException
     {
-        JDA jda = JDABuilder.createDefault("MTE1MTI0ODkxOTg0MjUzNzUxMw.GmXXqv.C893hxP_t3OfURcCNWJqfyiW5zS0vprmcjhETM").addEventListeners(new ReadyListener()).build();
+        JDA jda = JDABuilder.createDefault("Token").addEventListeners(new ReadyListener()).build();
         jda.getPresence().setStatus(OnlineStatus.ONLINE);
         jda.getPresence().setActivity(Activity.competing("Deranking!"));
 
