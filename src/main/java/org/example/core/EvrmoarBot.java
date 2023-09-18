@@ -16,7 +16,6 @@ import net.dv8tion.jda.api.sharding.ShardManager;
 
 import javax.security.auth.login.LoginException;
 
-// https://discord.com/api/oauth2/authorize?client_id=1151248919842537513&permissions=8&scope=bot
 
 
 //config = Dotenv.configure().load();
