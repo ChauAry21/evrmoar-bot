@@ -12,10 +12,11 @@ public class MyListener extends ListenerAdapter
         if (event.getAuthor().isBot()) return;
         Message message = event.getMessage();
         String content = message.getContentRaw();
-        if (content.equals("!ping"))
+        if (content.equalsIgnoreCase("!ping"))
         {
             MessageChannel channel = event.getChannel();
-            channel.sendMessage("Pong!").queue();
+            channel.sendMessage("pong!").queue();
+
         }
     }
 }
