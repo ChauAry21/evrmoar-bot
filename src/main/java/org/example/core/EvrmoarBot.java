@@ -11,6 +11,7 @@ import net.dv8tion.jda.api.utils.ChunkingFilter;
 import net.dv8tion.jda.api.utils.MemberCachePolicy;
 import net.dv8tion.jda.api.utils.cache.CacheFlag;
 import org.example.core.listeners.MyListener;
+import org.example.core.listeners.Purge;
 
 import javax.security.auth.login.LoginException;
 
@@ -18,8 +19,6 @@ public class EvrmoarBot {
 
     private final ShardManager shardControl;
     private final Dotenv config;
-
-
 
     public ShardManager getShardControl() {
         return shardControl;
@@ -39,6 +38,7 @@ public class EvrmoarBot {
 
         shardControl = build.build();
         shardControl.addEventListener(new MyListener());
+        shardControl.addEventListener(new Purge());
     }
 
     public static void main(String[] args) {
